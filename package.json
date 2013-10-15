@@ -1,7 +1,7 @@
 {
-  "name": "containers",
+  "name": "immutable-collections",
   "version": "0.0.1",
-  "description": "Efficient containers for Javascript",
+  "description": "Persistent collections for Javascript",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
