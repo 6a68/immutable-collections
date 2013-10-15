@@ -20,6 +20,22 @@ describe('List', function() {
     });
   });
 
+  describe('.head()', function() {
+    it('should thow an exception if the list is empty', function() {
+      //(isaacbw) there must be a nicer way to do this
+      var list = new List();
+      var thrown = false;
+
+      try {
+	list.head();
+      } catch (ex) {
+	thrown = true;
+      }
+
+      assert(thrown);
+    });
+  });
+
   describe('.toArray()', function() {
     it('should prepend an element to the list', function() {
       var list = new List();
@@ -52,6 +68,20 @@ describe('List', function() {
   describe('.last()', function() {
     it('should return the last element of the list', function() {
       assert.equal(new List([1, 2, 3]).last(), 3);
+    });
+
+    it('should thow an exception if the list is empty', function() {
+      //(isaacbw) there must be a nicer way to do this
+      var list = new List();
+      var thrown = false;
+
+      try {
+	list.last();
+      } catch (ex) {
+	thrown = true;
+      }
+
+      assert(thrown);
     });
   });
 
