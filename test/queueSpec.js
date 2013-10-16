@@ -1,5 +1,5 @@
 var assert = require("chai").assert,
-    Queue = require("../index").BankersQueue;
+    Queue = require("../lib/queue");
 
 describe("Queue", function() {
   it("should start out empty", function() {
