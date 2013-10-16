@@ -65,6 +65,14 @@ describe("LazyList", function() {
     });
   });
 
+  describe("#prepend", function() {
+    it("should return a new list with an element prepended", function() {
+      var list = new LazyList([1]);
+      list = list.prepend(0);
+      assert.deepEqual(list.toArray(), [0, 1]);
+    });
+  });
+
   describe("#take", function() {
     it("should return a new list with n elements from the first list", function() {
       var list = new LazyList([1, 2, 3]);
